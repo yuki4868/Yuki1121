@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMAhGacKnMh1ZhSsotobSD+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yuki4868/Yuki1121/blob/main/%E3%80%8C10%E3%81%AE%E3%81%B9%E3%81%8D%E4%B9%97%E3%80%8D%E3%81%A8%E3%80%8C2%E3%81%AE%E3%81%B9%E3%81%8D%E4%B9%97%E3%80%8D%E3%81%AE%E6%AF%94%E8%BC%83\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "C-9EEd9djdZ1"
+      },
+      "outputs": [],
+      "source": [
+        "# (2の累乗, 10の累乗, ラベル)\n",
+        "comparisons = [\n",
+        "    (2**10, 10**3, \"2の10乗 と 10の3乗\"),\n",
+        "    (2**20, 10**6, \"2の20乗 と 10の6乗\"),\n",
+        "    (2**30, 10**9, \"2の30乗 と 10の9乗\"),\n",
+        "    (2**40, 10**12, \"2の40乗 と 10の12乗\")\n",
+        "]\n",
+        "\n",
+        "for val_2, val_10, label in comparisons:\n",
+        "    print(f\"=== {label} ===\")\n",
+        "    print(f\"  2のべき乗: {val_2:,}\")\n",
+        "    print(f\"  10のべき乗: {val_10:,}\")\n",
+        "\n",
+        "    # 1. 大小比較\n",
+        "    if val_2 > val_10:\n",
+        "        print(\"  -> 判定: 2のべき乗のほうが大きい\")\n",
+        "    elif val_2 < val_10:\n",
+        "        print(\"  -> 判定: 10のべき乗のほうが大きい\")\n",
+        "    else:\n",
+        "        print(\"  -> 判定: 等しい\")\n",
+        "\n",
+        "    # 2. パーセント差の計算 (10のべき乗を基準にした場合の差の割合)\n",
+        "    # パーセント差 = ((2のべき乗 - 10のべき乗) / 10のべき乗) * 100\n",
+        "    percent_diff = ((val_2 - val_10) / val_10) * 100\n",
+        "    print(f\"  -> 10のべき乗に対する差: {percent_diff:+.2f}%\")\n",
+        "\n",
+        "    # 3. 何倍になっているかの確認\n",
+        "    ratio = val_2 / val_10\n",
+        "    print(f\"  -> 倍率: 約 {ratio:.4f} 倍\")\n",
+        "    print(\"-\" * 40)"
+      ]
+    }
+  ]
+}
