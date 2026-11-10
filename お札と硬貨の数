@@ -1,0 +1,90 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN/Gat1vLZOKkOo5GB6YgoA",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yuki4868/Yuki1121/blob/main/%E3%81%8A%E6%9C%AD%E3%81%A8%E7%A1%AC%E8%B2%A8%E3%81%AE%E6%95%B0\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1XCnLeYMjp5n"
+      },
+      "outputs": [],
+      "source": [
+        "# 金額を入力する\n",
+        "amount = int(input(\"金額を入力してください: \"))\n",
+        "\n",
+        "print(f\"\\n入力された金額: {amount}円\\n--- 各金種の枚数 ---\")\n",
+        "\n",
+        "# 10000円札\n",
+        "bill_10000 = amount // 10000\n",
+        "amount = amount % 10000\n",
+        "\n",
+        "# 5000円札\n",
+        "bill_5000 = amount // 5000\n",
+        "amount = amount % 5000\n",
+        "\n",
+        "# 1000円札\n",
+        "bill_1000 = amount // 1000\n",
+        "amount = amount % 1000\n",
+        "\n",
+        "# 500円玉\n",
+        "coin_500 = amount // 500\n",
+        "amount = amount % 500\n",
+        "\n",
+        "# 100円玉\n",
+        "coin_100 = amount // 100\n",
+        "amount = amount % 100\n",
+        "\n",
+        "# 50円玉\n",
+        "coin_50 = amount // 50\n",
+        "amount = amount % 50\n",
+        "\n",
+        "# 10円玉\n",
+        "coin_10 = amount // 10\n",
+        "amount = amount % 10\n",
+        "\n",
+        "# 5円玉\n",
+        "coin_5 = amount // 5\n",
+        "amount = amount % 5\n",
+        "\n",
+        "# 1円玉（残ったものがすべて1円玉）\n",
+        "coin_1 = amount\n",
+        "\n",
+        "# 結果を表示する\n",
+        "print(f\"10000円札: {bill_10000}枚\")\n",
+        "print(f\" 5000円札: {bill_5000}枚\")\n",
+        "print(f\" 1000円札: {bill_1000}枚\")\n",
+        "print(f\"  500円玉: {coin_500}枚\")\n",
+        "print(f\"  100円玉: {coin_100}枚\")\n",
+        "print(f\"   50円玉: {coin_50}枚\")\n",
+        "print(f\"   10円玉: {coin_10}枚\")\n",
+        "print(f\"    5円玉: {coin_5}枚\")\n",
+        "print(f\"    1円玉: {coin_1}枚\")"
+      ]
+    }
+  ]
+}
