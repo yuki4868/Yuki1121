@@ -1,0 +1,62 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNE0IRgfjErBqxn4GxwGHYC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yuki4868/Yuki1121/blob/main/%E3%81%82%E3%82%8B%E5%AD%A6%E7%94%9F%E3%81%AE%E6%88%90%E7%B8%BE%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A01\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Zf6M_HsljLlu"
+      },
+      "outputs": [],
+      "source": [
+        "print(\"学籍番号と名前を入力してください\")\n",
+        "aoto1=input(\"学籍番号:\")\n",
+        "aoto2=input(\"名前:\")\n",
+        "# 3つの数値を受け取って合計と平均を計算するプログラム(前回の課題から引用)\n",
+        "\n",
+        "print(\"すべてのテストの結果を入力してください\")\n",
+        "num1 = float(input(\"国語テストの点数を入力してください: \"))\n",
+        "num2 = float(input(\"数学テストの点数を入力してください: \"))\n",
+        "num3 = float(input(\"英語テストの点数を入力してください: \"))\n",
+        "\n",
+        "# 合計を計算\n",
+        "total = num1 + num2 + num3\n",
+        "\n",
+        "# 平均を計算（3つの数のため、3で割る）\n",
+        "average = total / 3\n",
+        "\n",
+        "# 結果を表示\n",
+        "print(\"--- 計算結果 ---\")\n",
+        "print(f\"学籍番号:{aoto1}\")\n",
+        "print(f\"名前:{aoto2}\")\n",
+        "print(f\"合計: {total}\")\n",
+        "print(f\"平均: {average}\")"
+      ]
+    }
+  ]
+}
